@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Store</title>
+    <style>
+        /* Add your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('back.jpg'); 
+            background-size: cover; 
+            background-repeat: no-repeat; 
+        }
+
+        header {
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: flex-start;
+            margin: 20px 0;
+        }
+
+        .category {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            grid-gap: 155px;
+        }
+
+        .item {
+            text-align: center;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+
+        .item img {
+            width: 100%;
+            max-height: 150px;
+            height: 150px;
+        }
+
+        .price {
+            margin-top: 
+        }
+
+        .quantity {
+            margin-top: 10px;
+        }
+
+        .add-stock-input {
+            width: 60px;
+        }
+
+        .add-stock-button {
+            margin-left: 10px;
+        }
+
+        .order-checkbox {
+            margin-top: 10px; 
+        }
+
+        .item {
+    position: relative;
+}
+
+.stocks-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <img src="Joseph.jpg" alt="Logo" style="max-width: 500px;">
+    </header>
+    <section>
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Store</title>
+    <style>
+        /* Add your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('back.jpg'); 
+            background-size: cover; 
+            background-repeat: no-repeat; 
+        }
+
+        header {
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: flex-start;
+            margin: 20px 0;
+        }
+
+        .category {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            grid-gap: 155px;
+        }
+
+        .item {
+            text-align: center;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+
+        .item img {
+            width: 100%;
+            max-height: 150px;
+            height: 150px;
+        }
+
+        .price {
+            margin-top: 
+        }
+
+        .quantity {
+            margin-top: 10px;
+        }
+
+        .add-stock-input {
+            width: 60px;
+        }
+
+        .add-stock-button {
+            margin-left: 10px;
+        }
+
+        .order-checkbox {
+            margin-top: 10px; 
+        }
+
+        .item {
+    position: relative;
+}
+
+.stocks-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <img src="Joseph.jpg" alt="Logo" style="max-width: 500px;">
+    </header>
+
+    
+    <section>
+        
+        
+        <div class="category">
+            <h2>Jeans</h2>
+            <div class="item">
+                <img src="ripped.jpg" alt="ripped jeans">
+                <p>Ripped Jeans</p>
+                <div class="price">P500</div>
+                <div class="quantity">
+                    <span class="minus" onclick="decreaseQuantity(this)">-</span>
+                    <span class="quantity-value">0</span>
+                    <span class="add" onclick="increaseQuantity(this)">+</span>
+                </div>
+                <div class="stock">
+                    <input type="number" class="add-stock-input" min="0" value="0">
+                    <button class="add-stock-button" onclick="addStock(this)">Add Stock</button>
+                    <h4>Stocks: <span class="stock-value">10</span></h4> 
+                </div>
+                <input type="checkbox" class="order-checkbox" onclick="updateReceipt(this)">Order
+                <button class="cancel-order-button" onclick="cancelOrder(this)">Cancel Order</button>
+            </div>
+        
+        <div class="item">
+            <img src="slim.jpg" alt="Slim jeans">
+            <p>Slim Jeans</p>
+            <div class="price">P500</div>
+            <div class="quantity">
+                <span class="minus" onclick="decreaseQuantity(this)">-</span>
+                <span class="quantity-value">0</span>
+                <span class="add" onclick="increaseQuantity(this)">+</span>
+            </div>
+            <div class="stock">
+                <input type="number" class="add-stock-input" min="0" value="0">
+                <button class="add-stock-button" onclick="addStock(this)">Add Stock</button>
+                <h4>Stocks: <span class="stock-value">10</span></h4> 
+            </div>
+            <input type="checkbox" class="order-checkbox" onclick="updateReceipt(this)">Order
+            <button class="cancel-order-button" onclick="cancelOrder(this)">Cancel Order</button>
+
+        </div>
+        <div class="item">
+            <img src="wide.jpg" alt="Wide jeans">
+            <p>Wide Jeans</p>
+            <div class="price">P500</div>
+            <div class="quantity">
+                <span class="minus" onclick="decreaseQuantity(this)">-</span>
+                <span class="quantity-value">0</span>
+                <span class="add" onclick="increaseQuantity(this)">+</span>
+            </div>
+            <div class="stock">
+                <input type="number" class="add-stock-input" min="0" value="0">
+                <button class="add-stock-button" onclick="addStock(this)">Add Stock</button>
+                <h4>Stocks: <span class="stock-value">10</span></h4> 
+            </div>
+            <input type="checkbox" class="order-checkbox" onclick="updateReceipt(this)">Order
+            <button class="cancel-order-button" onclick="cancelOrder(this)">Cancel Order</button>
+
+        </div>
+        <div class="item">
+            <img src="straight.jpg" alt="Straight jeans">
+            <p>Straight Jeans</p>
+            <div class="price">P500</div>
+            <div class="quantity">
+                <span class="minus" onclick="decreaseQuantity(this)">-</span>
+                <span class="quantity-value">0</span>
+                <span class="add" onclick="increaseQuantity(this)">+</span>
+            </div>
+            <div class="stock">
+                <input type="number" class="add-stock-input" min="0" value="0">
+                <button class="add-stock-button" onclick="addStock(this)">Add Stock</button>
+                <h4>Stocks: <span class="stock-value">10</span></h4> 
+            </div>
+            <input type="checkbox" class="order-checkbox" onclick="updateReceipt(this)">Order
+            <button class="cancel-order-button" onclick="cancelOrder(this)">Cancel Order</button>
+        </div>
+
+    </div>
+    <div class="category">
+       <h2>t shirt</h2>
+       <div class="item">
+           <img src="neck.jpg" alt="Vneck">
+           <p>Vneck</p>
+           <div class="price">P500</div>
+           <div class="quantity">
+               <span class="minus" onclick="decreaseQuantity(this)">-</span>
+               <span class="quantity-value">0</span>
+               <span class="add" onclick="increaseQuantity(this)">+</span>
+           </div>
+           <div class="stock">
+               <input type="number" class="add-stock-input" min="0" value="0">
+               <button class="add-stock-button" onclick="addStock(this)">Add Stock</button>
+               <h4>Stocks: <span class="stock-value">10</span></h4> 
+           </div>
+           <input type="checkbox" class="order-checkbox" onclick="updateReceipt(this)">Order
+           <button class="cancel-order-button" onclick="cancelOrder(this)">Cancel Order</button>
+       </div>
+
+       <div class="item">
+        <img src="henley.jpg" alt="Henley">
+        <p>Henley</p>
+        <div class="price">P500</div>
+        <div class="quantity">
+            <span class="minus" onclick="decreaseQuantity(this)">-</span>
+            <span class="quantity-value">0</span>
+            <span class="add" onclick="increaseQuantity(this)">+</span>
+        </div>
+        <div class="stock">
+            <input type="number" class="add-stock-input" min="0" value="0">
+            <button class="add-stock-button" onclick="addStock(this)">Add Stock</button>
+            <h4>Stocks: <span class="stock-value">10</span></h4> 
+        </div>
+        <input type="checkbox" class="order-checkbox" onclick="updateReceipt(this)">Order
+        <button class="cancel-order-button" onclick="cancelOrder(this)">Cancel Order</button>
+    </div>
+
+    <div class="item">
+        <img src="polo.jpg" alt="polo">
+        <p>Polo</p>
+        <div class="price">P500</div>
+        <div class="quantity">
+            <span class="minus" onclick="decreaseQuantity(this)">-</span>
+            <span class="quantity-value">0</span>
+            <span class="add" onclick="increaseQuantity(this)">+</span>
+        </div>
+        <div class="stock">
+            <input type="number" class="add-stock-input" min="0" value="0">
+            <button class="add-stock-button" onclick="addStock(this)">Add Stock</button>
+            <h4>Stocks: <span class="stock-value">10</span></h4> 
+        </div>
+        <input type="checkbox" class="order-checkbox" onclick="updateReceipt(this)">Order
+        <button class="cancel-order-button" onclick="cancelOrder(this)">Cancel Order</button>
+    </div>
+    <div class="item">
+        <img src="crew.jpg" alt="Crew">
+        <p>Crew</p>
+        <div class="price">P500</div>
+        <div class="quantity">
+            <span class="minus" onclick="decreaseQuantity(this)">-</span>
+            <span class="quantity-value">0</span>
+            <span class="add" onclick="increaseQuantity(this)">+</span>
+        </div>
+        <div class="stock">
+            <input type="number" class="add-stock-input" min="0" value="0">
+            <button class="add-stock-button" onclick="addStock(this)">Add Stock</button>
+            <h4>Stocks: <span class="stock-value">10</span></h4> 
+        </div>
+        <input type="checkbox" class="order-checkbox" onclick="updateReceipt(this)">Order
+        <button class="cancel-order-button" onclick="cancelOrder(this)">Cancel Order</button>
+    </div>
+    
+    <div class="category">
+        <h2>Perfume</h2>
+        <div class="item">
+            <img src="versace.jpg" alt="Versace">
+            <p>Versace</p>
+            <div class="price">P800</div>
+            <div class="quantity">
+                <span class="minus" onclick="decreaseQuantity(this)">-</span>
+                <span class="quantity-value">0</span>
+                <span class="add" onclick="increaseQuantity(this)">+</span>
+            </div>
+            <div class="stock">
+                <input type="number" class="add-stock-input" min="0" value="0">
+                <button class="add-stock-button" onclick="addStock(this)">Add Stock</button>
+                <h4>Stocks: <span class="stock-value">10</span></h4> 
+            </div>
+            <input type="checkbox" class="order-checkbox" onclick="updateReceipt(this)">Order
+            <button class="cancel-order-button" onclick="cancelOrder(this)">Cancel Order</button>
+        </div>
+    </div>
+
+    <div class="item">
+        <img src="ck.jpeg" alt="CK">
+        <p>Ck</p>
+        <div class="price">P1000</div>
+        <div class="quantity">
+            <span class="minus" onclick="decreaseQuantity(this)">-</span>
+            <span class="quantity-value">0</span>
+            <span class="add" onclick="increaseQuantity(this)">+</span>
+        </div>
+        <div class="stock">
+            <input type="number" class="add-stock-input" min="0" value="0">
+            <button class="add-stock-button" onclick="addStock(this)">Add Stock</button>
+            <h4>Stocks: <span class="stock-value">10</span></h4> 
+        </div>
+        <input type="checkbox" class="order-checkbox" onclick="updateReceipt(this)">Order
+        <button class="cancel-order-button" onclick="cancelOrder(this)">Cancel Order</button>
+    </div>
+
+    <div class="item">
+        <img src="sarah.jpg" alt="Sarah">
+        <p>Sarah</p>
+        <div class="price">P1500</div>
+        <div class="quantity">
+            <span class="minus" onclick="decreaseQuantity(this)">-</span>
+            <span class="quantity-value">0</span>
+            <span class="add" onclick="increaseQuantity(this)">+</span>
+        </div>
+        <div class="stock">
+            <input type="number" class="add-stock-input" min="0" value="0">
+            <button class="add-stock-button" onclick="addStock(this)">Add Stock</button>
+            <h4>Stocks: <span class="stock-value">10</span></h4> 
+        </div>
+        <input type="checkbox" class="order-checkbox" onclick="updateReceipt(this)">Order
+        <button class="cancel-order-button" onclick="cancelOrder(this)">Cancel Order</button>
+    </div>
+
+    <div class="item">
+        <img src="aficionado.jpeg" alt="aficionado">
+        <p>Aficionado</p>
+        <div class="price">P900</div>
+        <div class="quantity">
+            <span class="minus" onclick="decreaseQuantity(this)">-</span>
+            <span class="quantity-value">0</span>
+            <span class="add" onclick="increaseQuantity(this)">+</span>
+        </div>
+        <div class="stock">
+            <input type="number" class="add-stock-input" min="0" value="0">
+            <button class="add-stock-button" onclick="addStock(this)">Add Stock</button>
+            <h4>Stocks: <span class="stock-value">10</span></h4> 
+        </div>
+        <input type="checkbox" class="order-checkbox" onclick="updateReceipt(this)">Order
+        <button class="cancel-order-button" onclick="cancelOrder(this)">Cancel Order</button>
+    </div>
+
+</div>
+<div class="category">
+    <h2>Sando</h2>
+    <div class="item">
+        <img src="jersey.jpg" alt="Jersey">
+        <p>Jersey</p>
+        <div class="price">P700</div>
+        <div class="quantity">
+            <span class="minus" onclick="decreaseQuantity(this)">-</span>
+            <span class="quantity-value">0</span>
+            <span class="add" onclick="increaseQuantity(this)">+</span>
+        </div>
+        <div class="stock">
+            <input type="number" class="add-stock-input" min="0" value="0">
+            <button class="add-stock-button" onclick="addStock(this)">Add Stock</button>
+            <h4>Stocks: <span class="stock-value">10</span></h4> 
+        </div>
+        <input type="checkbox" class="order-checkbox" onclick="updateReceipt(this)">Order
+        <button class="cancel-order-button" onclick="cancelOrder(this)">Cancel Order</button>
+    </div>
+
+    <div class="item">
+        <img src="school.jpg" alt="School sando">
+        <p>School sando</p>
+        <div class="price">P400</div>
+        <div class="quantity">
+            <span class="minus" onclick="decreaseQuantity(this)">-</span>
+            <span class="quantity-value">0</span>
+            <span class="add" onclick="increaseQuantity(this)">+</span>
+        </div>
+        <div class="stock">
+            <input type="number" class="add-stock-input" min="0" value="0">
+            <button class="add-stock-button" onclick="addStock(this)">Add Stock</button>
+            <h4>Stocks: <span class="stock-value">10</span></h4> 
+        </div>
+        <input type="checkbox" class="order-checkbox" onclick="updateReceipt(this)">Order
+        <button class="cancel-order-button" onclick="cancelOrder(this)">Cancel Order</button>
+    </div>
+
+    <div class="item">
+        <img src="drifit.jpg" alt="drifit">
+        <p>Drifit</p>
+        <div class="price">P350</div>
+        <div class="quantity">
+            <span class="minus" onclick="decreaseQuantity(this)">-</span>
+            <span class="quantity-value">0</span>
+            <span class="add" onclick="increaseQuantity(this)">+</span>
+        </div>
+        <div class="stock">
+            <input type="number" class="add-stock-input" min="0" value="0">
+            <button class="add-stock-button" onclick="addStock(this)">Add Stock</button>
+            <h4>Stocks: <span class="stock-value">10</span></h4> 
+        </div>
+        <input type="checkbox" class="order-checkbox" onclick="updateReceipt(this)">Order
+        <button class="cancel-order-button" onclick="cancelOrder(this)">Cancel Order</button>
+    </div>
+
+    <div class="item">
+        <img src="tollfree.jpg" alt="tollfree">
+        <p>Tollfree</p>
+        <div class="price">P250</div>
+        <div class="quantity">
+            <span class="minus" onclick="decreaseQuantity(this)">-</span>
+            <span class="quantity-value">0</span>
+            <span class="add" onclick="increaseQuantity(this)">+</span>
+        </div>
+        <div class="stock">
+            <input type="number" class="add-stock-input" min="0" value="0">
+            <button class="add-stock-button" onclick="addStock(this)">Add Stock</button>
+            <h4>Stocks: <span class="stock-value">10</span></h4> 
+        </div>
+        <input type="checkbox" class="order-checkbox" onclick="updateReceipt(this)">Order
+        <button class="cancel-order-button" onclick="cancelOrder(this)">Cancel Order</button>
+    </div>
+</div>
+
+<div class="category">
+    <h2>Toys</h2>
+    <div class="item">
+        <img src="lego.jpg" alt="Lego">
+        <p>Lego</p>
+        <div class="price">P450</div>
+        <div class="quantity">
+            <span class="minus" onclick="decreaseQuantity(this)">-</span>
+            <span class="quantity-value">0</span>
+            <span class="add" onclick="increaseQuantity(this)">+</span>
+        </div>
+        <div class="stock">
+            <input type="number" class="add-stock-input" min="0" value="0">
+            <button class="add-stock-button" onclick="addStock(this)">Add Stock</button>
+            <h4>Stocks: <span class="stock-value">10</span></h4> 
+        </div>
+        <input type="checkbox" class="order-checkbox" onclick="updateReceipt(this)">Order
+        <button class="cancel-order-button" onclick="cancelOrder(this)">Cancel Order</button>
+    </div>
+    
+    <div class="item">
+        <img src="cars.jpg" alt="Cars">
+        <p>Cars</p>
+        <div class="price">P290</div>
+        <div class="quantity">
+            <span class="minus" onclick="decreaseQuantity(this)">-</span>
+            <span class="quantity-value">0</span>
+            <span class="add" onclick="increaseQuantity(this)">+</span>
+        </div>
+        <div class="stock">
+            <input type="number" class="add-stock-input" min="0" value="0">
+            <button class="add-stock-button" onclick="addStock(this)">Add Stock</button>
+            <h4>Stocks: <span class="stock-value">10</span></h4> 
+        </div>
+        <input type="checkbox" class="order-checkbox" onclick="updateReceipt(this)">Order
+        <button class="cancel-order-button" onclick="cancelOrder(this)">Cancel Order</button>
+    </div>
+
+    <div class="item">
+        <img src="gun.jpeg" alt="toy gun">
+        <p>Toy gun</p>
+        <div class="price">P350</div>
+        <div class="quantity">
+            <span class="minus" onclick="decreaseQuantity(this)">-</span>
+            <span class="quantity-value">0</span>
+            <span class="add" onclick="increaseQuantity(this)">+</span>
+        </div>
+        <div class="stock">
+            <input type="number" class="add-stock-input" min="0" value="0">
+            <button class="add-stock-button" onclick="addStock(this)">Add Stock</button>
+            <h4>Stocks: <span class="stock-value">10</span></h4> 
+        </div>
+        <input type="checkbox" class="order-checkbox" onclick="updateReceipt(this)">Order
+        <button class="cancel-order-button" onclick="cancelOrder(this)">Cancel Order</button>
+    </div>
+
+    <div class="item">
+        <img src="robot.jpg" alt="Robot">
+        <p>Robot</p>
+        <div class="price">P180</div>
+        <div class="quantity">
+            <span class="minus" onclick="decreaseQuantity(this)">-</span>
+            <span class="quantity-value">0</span>
+            <span class="add" onclick="increaseQuantity(this)">+</span>
+        </div>
+        <div class="stock">
+            <input type="number" class="add-stock-input" min="0" value="0">
+            <button class="add-stock-button" onclick="addStock(this)">Add Stock</button>
+            <h4>Stocks: <span class="stock-value">10</span></h4> 
+        </div>
+        <input type="checkbox" class="order-checkbox" onclick="updateReceipt(this)">Order
+        <button class="cancel-order-button" onclick="cancelOrder(this)">Cancel Order</button>
+    </div>
+
+</div> 
+
+    </section>
+
+    <li><a href="stock.html">Add Stocks</a></li>
+    
+
+    <div id="receipt-box">
+        <h2>Receipt</h2>
+        <div id="receipt-content"></div>
+    </div>
+
+
+    <input type="checkbox" id="student-discount"> Student Discount<br>
+<input type="checkbox" id="senior-discount"> Senior Discount<br>
+<input type="checkbox" id="pwd-discount"> PWD Discount<br>
+    
+    <div>
+        <label for="amount-paid">Amount Paid:</label>
+        <input type="number" id="amount-paid" min="0">
+        <button id="calculate-change">Calculate Change</button>
+        <p>Total Price: <span id="total-price">$0</span></p>
+        <p>Cash Change: <span id="cash-change">$0</span></p>
+    </div>
+    
+
+    <script>
+        function increaseQuantity(element) {
+            const quantityElement = element.parentElement.querySelector('.quantity-value');
+            let quantity = parseInt(quantityElement.textContent);
+            quantity++;
+            quantityElement.textContent = quantity;
+        }
+
+        function decreaseQuantity(element) {
+            const quantityElement = element.parentElement.querySelector('.quantity-value');
+            let quantity = parseInt(quantityElement.textContent);
+            if (quantity > 0) {
+                quantity--;
+                quantityElement.textContent = quantity;
+            }
+        }
+
+        function addStock(button) {
+            const stockElement = button.parentElement.querySelector('.stock-value');
+            const stockInput = button.parentElement.querySelector('.add-stock-input');
+            const addedStock = parseInt(stockInput.value);
+            if (!isNaN(addedStock) && addedStock >= 0) {
+                let currentStock = parseInt(stockElement.textContent);
+                currentStock += addedStock;
+                stockElement.textContent = currentStock;
+                stockInput.value = 0;
+            } else {
+                alert("Please enter a valid stock quantity.");
+            }
+        }
+
+        function updateReceipt(checkbox) {
+            const itemName = checkbox.parentElement.querySelector('p').textContent;
+            const price = parseInt(checkbox.parentElement.querySelector('.price').textContent.replace('P', ''));
+            const quantity = parseInt(checkbox.parentElement.querySelector('.quantity-value').textContent);
+            const isChecked = checkbox.checked;
+
+            if (isChecked) {
+                updateReceiptContent(itemName, price, quantity);
+            } else {
+                removeReceiptItem(itemName, price, quantity);
+            }
+        }
+
+        function updateReceiptContent(itemName, price, quantity) {
+            const receiptContent = document.getElementById('receipt-content');
+            const newReceiptItem = `<p>${itemName} x ${quantity} - $${price * quantity}</p>`;
+            receiptContent.innerHTML += newReceiptItem;
+            updateTotalPrice(price * quantity);
+        }
+
+        function removeReceiptItem(itemName, price, quantity) {
+            const receiptContent = document.getElementById('receipt-content');
+            const receiptItems = receiptContent.querySelectorAll('p');
+            receiptItems.forEach(item => {
+                if (item.textContent.includes(itemName)) {
+                    receiptContent.removeChild(item);
+                    updateTotalPrice(-price * quantity);
+                }
+            });
+        }
+
+        function updateTotalPrice(price) {
+            const totalPriceElement = document.getElementById('total-price');
+            let currentTotalPrice = parseInt(totalPriceElement.textContent.replace('$', ''));
+            currentTotalPrice += price;
+            totalPriceElement.textContent = `$${currentTotalPrice}`;
+        }
+
+        function cancelOrder(button) {
+            const item = button.parentElement;
+            const checkbox = item.querySelector('.order-checkbox');
+            const quantityElement = item.querySelector('.quantity-value');
+            const itemName = item.querySelector('p').textContent;
+            const price = parseInt(item.querySelector('.price').textContent.replace('P', ''));
+            const quantity = parseInt(quantityElement.textContent);
+
+            // Uncheck the checkbox
+            checkbox.checked = false;
+
+            // Reset the quantity
+            quantityElement.textContent = '0';
+
+            // Update the receipt by removing the item
+            removeReceiptItem(itemName, price, quantity);
+        }
+
+        document.getElementById('calculate-change').addEventListener('click', () => {
+            const amountPaid = parseInt(document.getElementById('amount-paid').value);
+            const totalPrice = parseInt(document.getElementById('total-price').textContent.replace('$', ''));
+            const cashChange = amountPaid - totalPrice;
+            document.getElementById('cash-change').textContent = `$${cashChange}`;
+        });
+
+        document.getElementById('student-discount').addEventListener('change', applyDiscount);
+    document.getElementById('senior-discount').addEventListener('change', applyDiscount);
+    document.getElementById('pwd-discount').addEventListener('change', applyDiscount);
+
+    // Function to apply discount
+    function applyDiscount() {
+        const studentDiscount = document.getElementById('student-discount').checked;
+        const seniorDiscount = document.getElementById('senior-discount').checked;
+        const pwdDiscount = document.getElementById('pwd-discount').checked;
+
+        let discountRate = 0.1; // Default discount rate
+
+        // Determine discount rate based on selection
+        if (studentDiscount) {
+            discountRate = 0.10; // 10% discount for students
+        } else if (seniorDiscount) {
+            discountRate = 0.20; // 15% discount for seniors
+        } else if (pwdDiscount) {
+            discountRate = 0.30; // 20% discount for PWDs
+        }
+
+        // Apply discount to total price
+        const totalPrice = parseInt(document.getElementById('total-price').textContent.replace('$', ''));
+        const discountedPrice = totalPrice * (1 - discountRate);
+        document.getElementById('total-price').textContent = `$${discountedPrice.toFixed(2)}`; // Ensure two decimal places
+    }
+
+    function viewStocks() {
+            // Redirect to the "add_stock.html" page
+            window.location.href = "add_stock.html";
+        }
+
+        
+
+    </script>
+</body>
+</html>
+
+      

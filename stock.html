@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stocks</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Stocks</h1>
+    <hr>
+    <div class="stock-management">
+      <form id="stock-form">
+        <label for="item-name">Item Name:</label>
+        <select id="item-name">
+          <option value="Ripped">Ripped jeans</option>
+          <option value="Slim">Slim jeans</option>
+          <option value="Wide">Wide jeans</option>
+          <option value="Straight">Straight Jeans</option>
+          <option value="Vneck">Vneck</option>
+          <option value="Henley">Henley</option>
+          <option value="Polo">Polo</option>
+          <option value="Crew">Crew</option>
+          <option value="Versace">Versace</option>
+          <option value="Ck">Ck</option>
+          <option value="Aficionado">Aficionado</option>
+          <option value="Sarah">Sarah</option>
+          <option value="Jersey">Jersey</option>
+          <option value="School sando">School sando</option>
+          <option value="Drifit">Drifit</option>
+          <option value="tollfree">Tollfree</option>
+          <option value="Lego">Lego</option>
+          <option value="Cars">Cars</option>
+          <option value="Toy gun">Toy gun</option>
+          <option value="Robot">Robot</option>
+        </select>
+        <label for="new-stock">New Stock:</label>
+        <input type="number" id="new-stock" min="1">
+        <button type="button" onclick="updateStock()">Update Stock</button>
+      </form>
+      <a href="store.html">Back to Home</a>
+    </div>
+  </div>
+
+  <script>
+    function updateStock() {
+      const itemName = document.getElementById('item-name').value;
+      const newStock = parseInt(document.getElementById('new-stock').value);
+      
+      // Fetch existing stock from local storage or server (mocked here as a simple object)
+      const stockData = JSON.parse(localStorage.getItem('stockData')) || {
+        'Ripped': 10,
+        'Slim': 10,
+        'Wide': 10,
+        'Straight': 10,
+        'Vneck': 10,
+        'Henley': 10,
+        'Polo': 10,
+        'Crew': 10,
+        'Versace': 10,
+        'Ck': 10,
+        'Aficionado': 10,
+        'Sarah': 10,
+        'Jersey': 10,
+        'School sando': 10,
+        'Drifit': 10,
+        'Tollfree': 10,
+        'Lego': 10,
+        'Cars': 10,
+        'Toy gun': 10,
+        'Robot': 10,
+      };
+
+      // Update stock
+      stockData[itemName] = newStock;
+
+      // Save updated stock data back to local storage or server
+      localStorage.setItem('stockData', JSON.stringify(stockData));
+
+      alert(`Stock for ${itemName} updated to ${newStock}`);
+    }
+  </script>
+</body>
+</html>

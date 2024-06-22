@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Page</title>
+    
+    <style>
+        @keyframes gradientBackground {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @keyframes shake {
+            0% { transform: translateX(0); }
+            25% { transform: translateX(-5px); }
+            50% { transform: translateX(5px); }
+            75% { transform: translateX(-5px); }
+            100% { transform: translateX(0); }
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(45deg, #3b8d99, #6b6b83, #a3a3a3, #d9d9d9);
+            background-size: 400% 400%;
+            animation: gradientBackground 10s ease infinite;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* Two columns with equal width */
+            gap: 20px;
+            justify-items: center; /* Center items horizontally */
+            align-items: center; /* Center items vertically */
+            text-align: center; /* Center text within the container */
+            margin-top: 20px; /* Adjust the margin to push the content down */
+        }
+
+        .title {
+            font-size: 80px; /* Larger font size */
+            font-weight: bold; /* Bold font weight */
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6); /* Add text shadow for depth */
+            margin-bottom: 20px;
+            text-align: center; /* Center text horizontally */
+            animation: shake 0.5s infinite; /* Apply the shake animation */
+        }
+
+        button {
+            padding: 80px 160px; /* Increased padding for larger buttons */
+            font-size: 30px; /* Increased font size */
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            display: inline-block;
+            text-align: center;
+            text-decoration: none;
+            background-size: cover; /* Cover the entire button */
+            background-position: center; /* Center the background image */
+            background-repeat: no-repeat; /* Prevent background image from repeating */
+        }
+
+        button.cor {
+            padding: 100px 200px; /* Increased padding for the larger COR button */
+            font-size: 36px; /* Increased font size for better readability */
+            background-color: #4CAF50; /* Background color for the COR button */
+            background-image: url('images/cor.png'); /* Background image URL */
+        }
+
+        button.resume {
+            padding: 90px 180px; /* Increased padding for the larger resume button */
+            font-size: 36px; /* Increased font size for better readability */
+            background-color: #007bff; /* Background color for the resume button */
+            background-image: url('images/res.png'); /* Background image */
+        }
+
+        button.sari-sari-store {
+            background-color: #007bff; /* Background color for the sari sari store button */
+            background-image: url('images/sari.png'); /* Background image */
+        }
+
+        button.restaurant {
+            background-color: #007bff; /* Background color for the restaurant button */
+            background-image: url('images/menu.png'); /* Background image */
+        }
+
+        button:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="title">Final Project</div>
+    <div class="container">
+        <button class="sari-sari-store" onclick="openSariSariStore()">Sari Sari Store</button>
+        <button class="restaurant" onclick="openRestaurant()">Restaurant</button>
+        <button class="cor" onclick="openCOR()">COR</button>
+        <button class="resume" onclick="openResume()">Resume</button>
+    </div>
+    <script>
+        function openSariSariStore() {
+            window.location.href = 'store.html'; // Adjust the filename as needed
+        }
+
+        function openRestaurant() {
+            window.location.href = 'jojo.html'; // Adjust the filename as needed
+        }
+
+        function openCOR() {
+            window.location.href = 'cor.html'; // Adjust the filename as needed
+        }
+
+        function openResume() {
+            window.location.href = 'resume.html'; // Adjust the filename as needed
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Restaurant Menu</title>
+<style>
+header{
+ position: fixed;
+ width: 100%;
+ padding-top: 1px;
+ top: 0;
+ }
+  .menu-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0d0e0d;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+    border: none;
+  }
+
+  nav {
+    background-color: #f39c12;
+    padding: 15px 20px; /* Adjust the padding as needed */
+    text-align: center;
+    position: fixed;
+    justify-content: content;
+    align-item: center;
+    width: 100%;
+    top: 0;
+    font-size: 20px;
+}
+  
+  
+  .menu-btn .images {
+    display: flex;
+    text-align: center; 
+  }
+
+  
+ .menu-btn .images img {
+    max-width: 200px;
+    margin: 20px;
+    display: block; 
+  
+  }
+  
+
+  .menu-btn .images label {
+    display: block;
+    margin-bottom: 20px;
+  }
+  
+  
+  section {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+
+  h2 {
+    font-size: 24px;
+    color: #0d0e0d;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  
+  
+  section img {
+    margin-bottom: 40px;
+  }
+  
+  p {
+    font-size: 20px;
+    color: #666666;
+    margin-bottom: 20px;
+  }
+
+  section p {
+    font-size: 20px;
+    color: #666666;
+    margin-bottom: 10px;
+    margin-top: 10px; 
+    text-align: center; 
+    font-weight: bold; 
+  }
+  input[type="number"] {
+    width: 60px; /* Adjust width as needed */
+    padding: 5px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center; /* Center aligning the text */
+}
+body {
+    background-image: url('back.jpg'); /* Replace 'background-image.jpg' with the path to your image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.menu-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-item {
+    text-align: center;
+}
+
+.menu-item img {
+    width: 200px; /* Set a fixed width */
+    height: 200px; /* Set a fixed height */
+    object-fit: cover; /* Maintain aspect ratio and cover the entire space */
+}
+.menu-item p {
+    font-size: 18px;
+    color: #666;
+}
+#total-amount {
+    font-size: 24px; /* Adjust the font size as needed */
+}
+</style>
+</head>
+<body>
+
+<center>
+<header>
+</header>
+<nav>     
+    <a href="#main">Main Dishes</a>
+    <a href="#vegetable">Vegetables</a>
+    <a href="#dessert">Desserts</a>
+    <a href="#drink">Drinks</a>
+    <a href="#add-on">Add-Ons</a>  
+</nav>
+
+<section id="main">
+
+    <section id="main" class="menu-section">
+      <h2>Main Dishes</h2>
+      <div class="menu-item">
+          <img src="adobo.jpg" alt="Adobo">
+          <p>Adobo (P250)</p>
+          <input type="checkbox" id="main-dish-item-1" />
+          <input type="number" class="quantity-input" id="adobo-quantity" value="0" min="0">
+      </div>
+    <div>
+        <img src="bicol.jpg" alt="Bicol Express" width="200" height="200">
+        <p>Bicol Express (P280)</p>
+        <input type="checkbox" id="main-dish-item-1" />
+        <input type="number" class="quantity-input" id="bicol-quantity" value="0" min="0">
+    </div>
+    <div>
+      <img src="bulalo.jpg" alt="bulalo" width="200" height="200">
+      <p>Bicol Express (P500)</p>
+      <input type="checkbox" id="main-dish-item-1" />
+      <input type="number" class="quantity-input" id="bulalo-quantity" value="0" min="0">
+  </div>
+  <div>
+    <img src="sinigang.jpg" alt="sinigang" width="200" height="200">
+    <p>Sinigang (P300)</p>
+    <input type="checkbox" id="main-dish-item-1" />
+    <input type="number" class="quantity-input" id="sinigang-quantity" value="0" min="0">
+</div>
+<div>
+  <img src="menudo.jpg" alt="menudo" width="200" height="200">
+  <p>Menudo (P380)</p>
+  <input type="checkbox" id="main-dish-item-1" />
+  <input type="number" class="quantity-input" id="menudo-quantity" value="0" min="0">
+</div>
+</section>
+
+<section id="vegetable">
+  
+  <section id="vegetable" class="menu-section">
+    <h2>Vegetables</h2>
+    <div class="menu-item">
+        <img src="chop.jpg" alt="chopsuey">
+        <p>chopsuey (P220)</p>
+        <input type="checkbox" id="main-dish-item-1" />
+        <input type="number" class="quantity-input" id="chop-quantity" value="0" min="0">
+    </div>
+<div>
+  <img src="pinakbet.jpg" alt="pinakbet" width="200" height="200">
+  <p>Pinakbet (P100)</p>
+  <input type="checkbox" id="main-dish-item-1" />
+  <input type="number" class="quantity-input" id="pinakbet-quantity" value="0" min="0">
+</div>
+<div>
+  <img src="ampalaya.jpg" alt="pinakbet" width="200" height="200">
+  <p>Ampalaya (P180)</p>
+  <input type="checkbox" id="main-dish-item-1" />
+  <input type="number" class="quantity-input" id="ampalaya-quantity" value="0" min="0">
+</div>
+</section>
+
+<section id="dessert">
+
+  <section id="dessert" class="menu-section">
+    <h2>Desserts</h2>
+    <div class="menu-item">
+        <img src="halo.jpg" alt="Halo-Halo">
+        <p>Halo - Halo (P150)</p>
+        <input type="checkbox" id="main-dish-item-1" />
+        <input type="number" class="quantity-input" id="halo-quantity" value="0" min="0">
+    </div>
+  <div>
+    <img src="leche.jpg" alt="Leche flan" width="200" height="200">
+    <p>Leche flan (P100)</p>
+    <input type="checkbox" id="main-dish-item-1" />
+    <input type="number" class="quantity-input" id="leche-quantity" value="0" min="0">
+  </div>
+  <div>
+    <img src="ice.jpg" alt="Chocolate icecream" width="200" height="200">
+    <p>Chocolate ice cream (P100)</p>
+    <input type="checkbox" id="main-dish-item-1" />
+    <input type="number" class="quantity-input" id="ice-quantity" value="0" min="0">
+  </div>
+</section>
+<section id="drink">
+  <section id="drink" class="menu-section">
+    <h2>Drinks</h2>
+    <div class="menu-item">
+        <img src="coke.jpg" alt="Coke">
+        <p>Coke (P100)</p>
+        <input type="checkbox" id="main-dish-item-1" />
+        <input type="number" class="quantity-input" id="cola-quantity" value="0" min="0">
+    </div>
+
+  <div>
+    <img src="lemon.jpg" alt="Cucumber" width="200" height="200">
+    <p>Cucumber (P60)</p>
+    <input type="checkbox" id="main-dish-item-1" />
+    <input type="number" class="quantity-input" id="lemon-quantity" value="0" min="0">
+  </div>
+
+  <div>
+    <img src="water.jpg" alt="Water" width="200" height="200">
+    <p>Water (P50)</p>
+    <input type="checkbox" id="main-dish-item-1" />
+    <input type="number" class="quantity-input" id="water-quantity" value="0" min="0">
+  </div>
+</section>
+
+<section id="add-on">
+  <section id="add-ons" class="menu-section">
+    <h2>Add-on</h2>
+    <div class="menu-item">
+        <img src="fries.jpg" alt="Frech fries">
+        <p>French fries (P100)</p>
+        <input type="checkbox" id="main-dish-item-1" />
+        <input type="number" class="quantity-input" id="fries-quantity" value="0" min="0">
+    </div>
+<div>
+  <img src="bulaklak.png" alt="Chicharong bulaklak" width="200" height="200">
+  <p>Chicharong bulaklak (P90)</p>
+  <input type="checkbox" id="main-dish-item-1" />
+  <input type="number" class="quantity-input" id="bulaklak-quantity" value="0" min="0">
+</div>
+<div>
+  <img src="java.jpg" alt="Java rice" width="200" height="200">
+  <p>Java rice (P100)</p>
+  <input type="checkbox" id="main-dish-item-1" />
+  <input type="number" class="quantity-input" id="java-quantity" value="0" min="0">
+</div>
+</section>
+<section id="order">
+    
+    <p>Total Amount: <span id="total-amount">P0</span></p>
+    <button id="submit-order-btn">Submit Order</button>
+</section>
+
+</center>
+
+<script>
+ document.getElementById("submit-order-btn").addEventListener("click", function() {
+    // Main dishes
+    const adoboQuantity = parseInt(document.getElementById("adobo-quantity").value);
+    const bicolQuantity = parseInt(document.getElementById("bicol-quantity").value);
+    const bulaloQuantity = parseInt(document.getElementById("bulalo-quantity").value);
+    const sinigangQuantity = parseInt(document.getElementById("sinigang-quantity").value);
+    const menudoQuantity = parseInt(document.getElementById("menudo-quantity").value);
+    // Vegetables
+    const chopsueyQuantity = parseInt(document.getElementById("chop-quantity").value);
+    const pinakbetQuantity = parseInt(document.getElementById("pinakbet-quantity").value);
+    const ampalayaQuantity = parseInt(document.getElementById("ampalaya-quantity").value);
+    // Desserts
+    const haloQuantity = parseInt(document.getElementById("halo-quantity").value);
+    const lecheQuantity = parseInt(document.getElementById("leche-quantity").value);
+    const iceQuantity = parseInt(document.getElementById("ice-quantity").value);
+    // Drinks
+    const cokeQuantity = parseInt(document.getElementById("cola-quantity").value);
+    const cucumberQuantity = parseInt(document.getElementById("lemon-quantity").value);
+    const waterQuantity = parseInt(document.getElementById("water-quantity").value);
+    // Add-ons
+    const friesQuantity = parseInt(document.getElementById("fries-quantity").value);
+    const bulaklakQuantity = parseInt(document.getElementById("bulaklak-quantity").value);
+    const javaQuantity = parseInt(document.getElementById("java-quantity").value);
+    
+    // Calculate total amount
+    const totalAmount = (adoboQuantity * 250) +
+                        (bicolQuantity * 280) +
+                        (bulaloQuantity * 500) +
+                        (sinigangQuantity * 300) +
+                        (menudoQuantity * 380) +
+                        (chopsueyQuantity * 220) +
+                        (pinakbetQuantity * 100) +
+                        (ampalayaQuantity * 180) +
+                        (haloQuantity * 150) +
+                        (lecheQuantity * 100) +
+                        (iceQuantity * 100) +
+                        (cokeQuantity * 100) +
+                        (cucumberQuantity * 60) +
+                        (waterQuantity * 50) +
+                        (friesQuantity * 100) +
+                        (bulaklakQuantity * 90) +
+                        (javaQuantity * 100);
+    
+    // Display total amount
+    document.getElementById("total-amount").textContent = "P" + totalAmount;
+});
+  </script>
+
+</body>
+</html>
